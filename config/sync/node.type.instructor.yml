@@ -1,0 +1,18 @@
+uuid: a2048e8b-a852-4532-9a13-2c6450c83c1d
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Instructor
+type: instructor
+description: 'Course instructors'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

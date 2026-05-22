@@ -1,0 +1,9 @@
+uuid: 869c31a5-9a99-4965-96f9-74a0fa54fd32
+langcode: en
+status: true
+dependencies: {  }
+name: Categories
+vid: categories
+description: 'Course categories'
+weight: 0
+new_revision: false

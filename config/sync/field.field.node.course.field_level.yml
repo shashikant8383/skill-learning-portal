@@ -1,0 +1,21 @@
+uuid: 5ded276f-3b5d-4d1f-b864-922ba3aa6f86
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_level
+    - node.type.course
+  module:
+    - options
+id: node.course.field_level
+field_name: field_level
+entity_type: node
+bundle: course
+label: Level
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

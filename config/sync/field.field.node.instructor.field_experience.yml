@@ -1,0 +1,19 @@
+uuid: 9233a1ff-dea8-4d0a-b77a-9208d338a6ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_experience
+    - node.type.instructor
+id: node.instructor.field_experience
+field_name: field_experience
+entity_type: node
+bundle: instructor
+label: Experience
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
