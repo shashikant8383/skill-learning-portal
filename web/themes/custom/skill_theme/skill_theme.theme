@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function skill_theme_preprocess_page(array &$variables): void {
+  if (!\Drupal::service('path.matcher')->isFrontPage()) {
+    return;
+  }
+
+  $variables['featured_courses_view'] = views_embed_view('homepage_featured_courses', 'block_1');
+  $variables['top_instructors_view'] = views_embed_view('homepage_top_instructors', 'block_1');
+}
