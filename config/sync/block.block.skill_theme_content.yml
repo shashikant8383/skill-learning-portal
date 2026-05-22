@@ -1,0 +1,22 @@
+uuid: a853035f-a536-4ee4-a72f-85c6e34ae92e
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - skill_theme
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: skill_theme_content
+theme: skill_theme
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

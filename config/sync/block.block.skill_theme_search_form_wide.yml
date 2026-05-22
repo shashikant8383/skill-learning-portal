@@ -1,0 +1,23 @@
+uuid: 466823b5-9c1a-433b-8db3-ad39e8d79b29
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - skill_theme
+_core:
+  default_config_hash: pbbed0hdqGDF-_QWVVTWRAwgDIotFuAvWH5mWUZu0fA
+id: skill_theme_search_form_wide
+theme: skill_theme
+region: header
+weight: -5
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form (wide)'
+  label_display: '0'
+  provider: search
+  page_id: null
+visibility: {  }

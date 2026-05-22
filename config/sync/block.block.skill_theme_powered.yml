@@ -1,0 +1,22 @@
+uuid: d92883f3-086b-43c5-92e4-4412d36e41a1
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - skill_theme
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: skill_theme_powered
+theme: skill_theme
+region: header
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,15 @@
+name: Skill Theme
+type: theme
+description: Custom LMS Theme
+core_version_requirement: ^11
+base theme: false
+
+libraries:
+  - skill_theme/global-styling
+
+regions:
+  header: Header
+  primary_menu: Primary Menu
+  content: Content
+  sidebar: Sidebar
+  footer: Footer

@@ -1,0 +1,22 @@
+uuid: b2352eda-b21c-47a7-a989-a46ea07c5c1e
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - skill_theme
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: skill_theme_help
+theme: skill_theme
+region: header
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }
