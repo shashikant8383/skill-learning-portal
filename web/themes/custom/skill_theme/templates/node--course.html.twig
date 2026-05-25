@@ -1,0 +1,64 @@
+<article{{ attributes.addClass('course-detail') }}>
+
+  <section class="course-detail-hero">
+    <div class="course-detail-media">
+      {{ content.field_thumbnail }}
+    </div>
+
+    <div class="course-detail-intro">
+      <div class="course-detail-category">
+        <a href="{{ path('entity.taxonomy_term.canonical', {'taxonomy_term': node.field_category.target_id}) }}">
+          {{ node.field_category.entity.label }}
+        </a>
+      </div>
+
+      <h1 class="course-detail-title">
+        {{ label }}
+      </h1>
+
+      <div class="course-detail-instructor">
+        Instructor:
+        <a href="{{ path('entity.node.canonical', {'node': node.field_instructor.target_id}) }}">
+          {{ node.field_instructor.entity.label }}
+        </a>
+      </div>
+
+      <div class="course-detail-price">
+        ₹ {{ node.field_price.value|number_format(2, '.', ',') }}
+      </div>
+    </div>
+  </section>
+
+  <section class="course-detail-body">
+    <div class="course-detail-main">
+      <h2>Course Overview</h2>
+      <div class="course-detail-description">
+        {{ node.field_course_description.value|raw }}
+      </div>
+    </div>
+
+    <aside class="course-detail-sidebar">
+      <div class="course-detail-facts">
+        <div class="course-detail-fact">
+          <span>Duration</span>
+          <strong>{{ node.field_duration.value }}</strong>
+        </div>
+
+        <div class="course-detail-fact">
+          <span>Level</span>
+          <strong>{{ node.field_level.value|capitalize }}</strong>
+        </div>
+
+        <div class="course-detail-fact">
+          <span>Category</span>
+          <strong>{{ node.field_category.entity.label }}</strong>
+        </div>
+      </div>
+
+      <a class="course-detail-button" href="/contact">
+        Enquire Now
+      </a>
+    </aside>
+  </section>
+
+</article>
