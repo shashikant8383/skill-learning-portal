@@ -301,3 +301,70 @@ body {
     }
 
 }
+.instructor-page{
+    max-width: 1200px;
+    margin: 80px auto;
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    padding: 40px;
+}
+
+.instructor-page-image{
+    flex: 1;
+}
+
+.instructor-page-image img{
+    width: 100%;
+    max-width: 400px;
+    border-radius: 24px;
+    object-fit: cover;
+}
+
+.instructor-page-content{
+    flex: 1;
+}
+
+.instructor-page-name{
+    font-size: 56px;
+    margin-bottom: 20px;
+    color: #111827;
+}
+
+.instructor-page-exp{
+    font-size: 24px;
+    color: #2563eb;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.instructor-page-bio{
+    font-size: 20px;
+    line-height: 1.8;
+    color: #4b5563;
+}
+.instructor-card{
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.instructor-card-image img{
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.instructor-card-name{
+    margin-top: 20px;
+    font-size: 28px;
+}
+
+.instructor-card-exp{
+    margin-top: 10px;
+    color: #2563eb;
+    font-weight: 600;
+}
