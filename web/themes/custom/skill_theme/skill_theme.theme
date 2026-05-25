@@ -11,3 +11,48 @@ function skill_theme_preprocess_page(array &$variables): void {
   $variables['featured_courses_view'] = views_embed_view('homepage_featured_courses', 'block_1');
   $variables['top_instructors_view'] = views_embed_view('homepage_top_instructors', 'block_1');
 }
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function skill_theme_preprocess_node(array &$variables): void {
+  $node = $variables['node'] ?? NULL;
+
+  if (!$node instanceof \Drupal\node\NodeInterface || $node->bundle() !== 'course') {
+    return;
+  }
+
+  $course_enquiry_webform = \Drupal::entityTypeManager()
+    ->getStorage('webform')
+    ->load('course_enquiry');
+
+  if (!$course_enquiry_webform) {
+    return;
+  }
+
+  $variables['course_enquiry_webform'] = [
+    '#type' => 'webform',
+    '#webform' => $course_enquiry_webform,
+    '#default_data' => [
+      'course_id' => $node->id(),
+      'course_title' => $node->label(),
+    ],
+  ];
+
+  $contact_webform = \Drupal::entityTypeManager()
+    ->getStorage('webform')
+    ->load('contact');
+
+  if (!$contact_webform) {
+    return;
+  }
+
+  $variables['contact_webform'] = [
+    '#type' => 'webform',
+    '#webform' => $contact_webform,
+    '#default_data' => [
+      'course_id' => $node->id(),
+      'course_title' => $node->label(),
+    ],
+  ];
+}

@@ -482,6 +482,78 @@ body {
     text-decoration: none;
 }
 
+.course-enquiry-form {
+    border-top: 1px solid #e5e7eb;
+    display: grid;
+    gap: 16px;
+    margin-top: 28px;
+    padding-top: 28px;
+}
+
+.course-enquiry-form h3 {
+    color: #111827;
+    font-size: 26px;
+    line-height: 1.15;
+    margin: 0;
+}
+
+.course-enquiry-form .form-item {
+    margin: 0;
+}
+
+.course-enquiry-form label {
+    color: #374151;
+    display: block;
+    font-size: 14px;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.course-enquiry-form input,
+.course-enquiry-form textarea {
+    background: #f8fafc;
+    border: 1px solid #dbe3ef;
+    border-radius: 12px;
+    box-sizing: border-box;
+    color: #111827;
+    font: inherit;
+    min-height: 46px;
+    padding: 12px 14px;
+    width: 100%;
+}
+
+.course-enquiry-form textarea {
+    min-height: 118px;
+    resize: vertical;
+}
+
+.course-enquiry-form input:focus,
+.course-enquiry-form textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.14);
+    outline: none;
+}
+
+.course-enquiry-form .form-actions {
+    margin: 4px 0 0;
+}
+
+.course-enquiry-form .form-submit {
+    background: #2563eb;
+    border: 0;
+    border-radius: 12px;
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 800;
+    min-height: 52px;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.course-enquiry-form .form-submit:hover {
+    background: #1d4ed8;
+}
+
 .pager,
 #block-skill-theme-content nav[aria-label="Pagination"] {
     padding: 0 40px 56px;
