@@ -1,0 +1,30 @@
+<article{{ attributes.addClass('course-card') }}>
+  <div class="course-image">
+    {{ content.field_thumbnail }}
+  </div>
+
+  <div class="course-content">
+    <div class="course-category">
+      <a href="{{ path('entity.taxonomy_term.canonical', {'taxonomy_term': node.field_category.target_id}) }}">
+        {{ node.field_category.entity.label }}
+      </a>
+    </div>
+
+    <h3 class="course-title">
+      <a href="{{ url }}">
+        {{ label }}
+      </a>
+    </h3>
+
+    <div class="course-instructor">
+      Instructor:
+      <a href="{{ path('entity.node.canonical', {'node': node.field_instructor.target_id}) }}">
+        {{ node.field_instructor.entity.label }}
+      </a>
+    </div>
+
+    <div class="course-price">
+      ₹ {{ node.field_price.value|number_format(2, '.', ',') }}
+    </div>
+  </div>
+</article>
