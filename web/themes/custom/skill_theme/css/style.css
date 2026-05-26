@@ -777,3 +777,75 @@ body {
     line-height: 1.45;
     margin-top: 0;
 }
+.webform-submission-contact-form {
+  max-width: 720px;
+  margin: 56px auto;
+  padding: 32px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+.webform-submission-contact-form h1,
+.webform-submission-contact-form h2 {
+  margin: 0 0 24px;
+  color: #111827;
+  font-size: 32px;
+  line-height: 1.2;
+}
+
+.webform-submission-contact-form .form-item {
+  margin-bottom: 18px;
+}
+
+.webform-submission-contact-form label {
+  display: block;
+  margin-bottom: 8px;
+  color: #374151;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.webform-submission-contact-form input,
+.webform-submission-contact-form textarea {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 46px;
+  padding: 12px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #f9fafb;
+  color: #111827;
+  font: inherit;
+}
+
+.webform-submission-contact-form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.webform-submission-contact-form input:focus,
+.webform-submission-contact-form textarea:focus {
+  border-color: #2563eb;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.14);
+}
+
+.webform-submission-contact-form .form-actions {
+  margin-top: 24px;
+}
+
+.webform-submission-contact-form .form-submit {
+  width: 100%;
+  min-height: 50px;
+  border: 0;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #ffffff;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.webform-submission-contact-form .form-submit:hover {
+  background: #1d4ed8;
+}
