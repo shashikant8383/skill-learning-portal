@@ -4,6 +4,9 @@
  * Implements hook_preprocess_page().
  */
 function skill_theme_preprocess_page(array &$variables): void {
+  $account = \Drupal::currentUser();
+  $variables['is_student_user'] = $account->isAuthenticated() && in_array('student', $account->getRoles(), TRUE);
+
   if (!\Drupal::service('path.matcher')->isFrontPage()) {
     return;
   }

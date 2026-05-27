@@ -1,0 +1,6 @@
+services:
+  skill_user.access_denied_subscriber:
+    class: Drupal\skill_user\EventSubscriber\AccessDeniedSubscriber
+    arguments: ['@current_user']
+    tags:
+      - { name: event_subscriber }

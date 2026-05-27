@@ -1,0 +1,7 @@
+name: Skill User
+type: module
+description: Custom user behavior for Skill Learning Portal.
+core_version_requirement: ^11
+package: Custom
+dependencies:
+  - drupal:user

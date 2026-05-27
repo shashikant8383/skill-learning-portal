@@ -24,6 +24,19 @@ body {
     margin-left: 20px;
 }
 
+.main-navigation .student-logout-link {
+    background: #ffffff;
+    border-radius: 8px;
+    color: #0f172a;
+    display: inline-flex;
+    font-weight: 800;
+    padding: 10px 16px;
+}
+
+.main-navigation .student-logout-link:hover {
+    background: #e5e7eb;
+}
+
 .hero-section {
     background: linear-gradient(to right, #2563eb, #7c3aed);
     color: white;
@@ -848,4 +861,212 @@ body {
 
 .webform-submission-contact-form .form-submit:hover {
   background: #1d4ed8;
+}
+.user-register-form {
+  max-width: 640px;
+  margin: 56px auto;
+  padding: 32px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+.user-register-form .form-item {
+  margin-bottom: 18px;
+}
+
+.user-register-form label {
+  display: block;
+  margin-bottom: 8px;
+  color: #374151;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.user-register-form input {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 46px;
+  padding: 12px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #f9fafb;
+  color: #111827;
+  font: inherit;
+}
+
+.user-register-form input:focus {
+  border-color: #2563eb;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.14);
+}
+
+.user-register-form .description {
+  margin-top: 6px;
+  color: #6b7280;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.user-register-form .form-actions {
+  margin-top: 24px;
+}
+
+.user-register-form .form-submit {
+  width: 100%;
+  min-height: 50px;
+  border: 0;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #ffffff;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.user-register-form .form-submit:hover {
+  background: #1d4ed8;
+}
+.user-login-form {
+  max-width: 520px;
+  margin: 56px auto;
+  padding: 32px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+.user-login-form .form-item {
+  margin-bottom: 18px;
+}
+
+.user-login-form label {
+  display: block;
+  margin-bottom: 8px;
+  color: #374151;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.user-login-form input {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 46px;
+  padding: 12px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #f9fafb;
+  color: #111827;
+  font: inherit;
+}
+
+.user-login-form input:focus {
+  border-color: #2563eb;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.14);
+}
+
+.user-login-form .description {
+  margin-top: 6px;
+  color: #6b7280;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.user-login-form .form-actions {
+  margin-top: 24px;
+}
+
+.user-login-form .form-submit {
+  width: 100%;
+  min-height: 50px;
+  border: 0;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #ffffff;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.user-login-form .form-submit:hover {
+  background: #1d4ed8;
+}
+
+.user-login-form .user-login-register-link {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 14px;
+  min-height: 48px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  color: #2563eb;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.user-login-form .user-login-register-link:hover {
+  background: #eff6ff;
+  border-color: #2563eb;
+}
+
+#user-logout-confirm,
+.user-logout-confirm {
+  max-width: 520px;
+  margin: 56px auto;
+  padding: 32px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+}
+
+#user-logout-confirm p,
+.user-logout-confirm p {
+  margin: 0 0 24px;
+  color: #374151;
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+#user-logout-confirm .form-actions,
+.user-logout-confirm .form-actions {
+  display: flex;
+  gap: 12px;
+  margin: 0;
+}
+
+#user-logout-confirm .form-submit,
+.user-logout-confirm .form-submit {
+  min-height: 48px;
+  padding: 0 24px;
+  border: 0;
+  border-radius: 8px;
+  background: #dc2626;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+#user-logout-confirm .form-submit:hover,
+.user-logout-confirm .form-submit:hover {
+  background: #b91c1c;
+}
+
+#user-logout-confirm a,
+.user-logout-confirm a {
+  align-items: center;
+  display: inline-flex;
+  min-height: 48px;
+  padding: 0 20px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  color: #374151;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+#user-logout-confirm a:hover,
+.user-logout-confirm a:hover {
+  background: #f3f4f6;
+  border-color: #9ca3af;
 }

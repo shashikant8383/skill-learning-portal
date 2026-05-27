@@ -1,0 +1,57 @@
+<?php
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Url;
+
+/**
+ * Implements hook_entity_insert().
+ */
+function skill_user_entity_insert(EntityInterface $entity): void {
+  if ($entity->getEntityTypeId() !== 'user') {
+    return;
+  }
+
+  if (!$entity->hasRole('student')) {
+    $entity->addRole('student');
+    $entity->save();
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter() for user_login_form.
+ */
+function skill_user_form_user_login_form_alter(array &$form, FormStateInterface $form_state, string $form_id): void {
+  $form['#submit'][] = 'skill_user_login_redirect_submit';
+  $form['register_link'] = [
+    '#type' => 'link',
+    '#title' => t('Create new account'),
+    '#url' => Url::fromRoute('user.register'),
+    '#attributes' => [
+      'class' => ['user-login-register-link'],
+    ],
+    '#weight' => 100,
+  ];
+}
+
+/**
+ * Redirect users after login based on role.
+ */
+function skill_user_login_redirect_submit(array &$form, FormStateInterface $form_state): void {
+  $account = \Drupal::currentUser();
+  $destination = \Drupal::request()->query->get('destination');
+
+  if (is_string($destination) && $destination !== '') {
+    $form_state->setRedirectUrl(Url::fromUserInput('/' . ltrim($destination, '/')));
+    return;
+  }
+
+  if (in_array('administrator', $account->getRoles(), TRUE)) {
+    $form_state->setRedirectUrl(Url::fromUserInput('/'));
+    return;
+  }
+
+  if (in_array('student', $account->getRoles(), TRUE)) {
+    $form_state->setRedirectUrl(Url::fromUserInput('/'));
+  }
+}
